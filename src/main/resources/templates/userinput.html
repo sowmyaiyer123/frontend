@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Get Price Quote Average</title>
+    <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div class="container">
+    <h2>Price Average Helper</h2>
+    <br>
+    <form action="#" th:action="@{/userinput}" th:object="${userinput}" method="post">
+        <div class="form-group">
+            <label for="numquote">Number of quotes:</label>
+            <input type="number" class="form-control" id="numquote" th:field="*{numberOfQuotes}"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <br/>
+        <br/>
+        <p class="bg-success text-white" th:text="${average}"></p>
+    </form>
+</div>
+</body>
+</html>
