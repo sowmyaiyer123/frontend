@@ -13,7 +13,7 @@
     <form action="#" th:action="@{/userinput}" th:object="${userinput}" method="post">
         <div class="form-group">
             <label for="numquote">Number of quotes:</label>
-            <input type="number" class="form-control" id="numquote" th:field="*{numberOfQuotes}"/>
+            <input type="number" class="form-control" id="numquote" min="0" th:field="*{numberOfQuotes}"/>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         <br/>
